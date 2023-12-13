@@ -4,7 +4,7 @@ function preload() {
 	mario_jump = loadSound("jump.wav");
 	mario_coin = loadSound("coin.wav");
 	mario_kick = loadSound("kick.wav");
-	mario_die = loadSoud("mariodie.wav");
+	mario_die = loadSound("mariodie.wav");
 	setSprites();
 	MarioAnimation();
 }
@@ -28,18 +28,23 @@ function modelLoaded() {
 	console.log('Mario Carregando!');
 }
 
-function gotPoses (results)
+function gotPoses(results)
 {
-	if(results.lenght > 0)
+	if(results.length > 0)
 	{
 		console.log(results);
 		noseX = results[0].pose.nose.x;
-		noseY = results[0].pose.nose,y;
+		noseY = results[0].pose.nose.y;
 	}
 }
 function draw() {
-	game()
+	game();
 }
+
+
+
+
+
 
 
 
